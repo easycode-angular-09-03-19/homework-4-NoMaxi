@@ -1,0 +1,31 @@
+form {
+	background-color: cornsilk;
+}
+
+form label {
+	color: darkblue;
+}
+
+.form-control {
+    box-shadow: inset 0 0 5px 3px gainsboro;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+.form-text {
+	margin-top: 0;
+}
+
+.message-container {
+	height: 30px;
+}
+
+.alert-message {
+	padding-top: 3px;
+	font-size: 13px;
+}
+
+.btn-add-todo {
+    min-width: 130px;
+}
+
+

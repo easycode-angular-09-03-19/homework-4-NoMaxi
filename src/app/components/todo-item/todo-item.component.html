@@ -1,0 +1,10 @@
+<td [ngClass] = "{ 'text-line-through': item.completed }">{{ item.id }}</td>
+<td class="text-left text-column" [ngClass] = "{ 'text-line-through': item.completed }">{{ item.text }}</td>
+<td>
+    <button class="btn btn-complete mr-4"
+            [ngClass]="{ 'btn-success': !item.completed, 'btn-warning': item.completed }"
+            (click)="toggleTaskComplete()">
+            {{ item.completed ? 'Revert' : 'Complete' }}
+    </button>
+    <button class="btn btn-danger btn-delete" (click)="deleteTask()">Delete</button>
+</td>

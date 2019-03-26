@@ -1,0 +1,22 @@
+td {
+	border: 1px solid #757575;
+	font-family: 'Comic Sans MS', sans-serif;
+    vertical-align: middle;
+    word-wrap: break-word;;
+}
+
+.text-column {
+	max-width: 500px;
+}
+
+.text-line-through {
+	text-decoration: line-through;
+}
+
+.btn-complete {
+    width: 95px;
+}
+
+.btn-delete {
+	width: 85px;
+}

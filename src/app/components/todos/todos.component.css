@@ -1,0 +1,39 @@
+.content {
+	background: lightcyan url('../../../assets/bg-todo-list.jpeg');
+	object-fit: cover;
+	min-height: 100vh;
+}
+
+.title {
+	color: #90eaee;
+	font-family: 'Comic Sans MS', sans-serif;
+    text-shadow: #0a189b 2px -2px 2px;
+}
+
+.table {
+	background-color: #f5f1d0;
+	/*max-width: 800px;*/
+}
+
+.table thead {
+	background-color: #ddef91;
+	font-family: Verdana, sans-serif;
+}
+
+.table th {
+	border: 1px solid #757575;
+	color: darkred;
+}
+
+.table .id-column {
+    width: 10%;
+}
+
+.table .controls-column {
+    min-width: 230px;
+    width: 35%;
+}
+
+.btn-complete-all {
+    min-width: 160px;
+}
