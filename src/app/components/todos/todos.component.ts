@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Todo } from '../../interfaces/todo';
-import { combineAll } from 'rxjs/operators';
 
 @Component({
     selector: 'app-todos',
