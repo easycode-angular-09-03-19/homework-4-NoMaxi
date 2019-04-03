@@ -21,7 +21,8 @@
                                [ngClass]="{ 'text-success': item.completed }"
                                [item]="item"
                                (deleteItem)="onTodoItemEvent($event)"
-                ></app-todo-item>
+                               (isItemCompleted)="onTodoItemToggleComplete($event)">
+                </app-todo-item>
             </tbody>
         </table>
     </div>

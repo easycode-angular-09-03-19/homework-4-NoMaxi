@@ -1,22 +1,31 @@
-<form (ngSubmit)="onSubmitAddTask()"
+<form #addTodoForm="ngForm"
+      (ngSubmit)="onSubmitAddTask()"
       class="container col-5 border rounded shadow mt-3 mb-5 p-4"
-      #addTodoForm="ngForm" novalidate>
+      novalidate>
     <div class="form-group text-left">
-        <label for="todoTextInput"
-               class="font-weight-bold text-capitalize pl-3">todo
-            text</label>
-        <input type="text" id="todoTextInput" class="form-control"
-               name="todoText" aria-describedby="todoAddHelp"
+        <label class="font-weight-bold text-capitalize pl-3"
+               for="todoTextInput">
+            todo text
+        </label>
+        <input type="text"
+               id="todoTextInput"
+               class="form-control"
+               name="todoText"
+               aria-describedby="todoAddHelp"
                placeholder="Enter todo text"
-               [(ngModel)]="addedItem.text" #todoText="ngModel" required>
+               [(ngModel)]="addedItem.text"
+               #todoText="ngModel"
+               required>
         <div class="message-container">
-            <span [hidden]="todoText.valid" id="todoAddHelp"
+            <span [hidden]="todoText.valid"
+                  id="todoAddHelp"
                   class="alert-message text-danger form-text pl-3">
                 Enter todo text before pressing <strong>Add todo</strong> button
             </span>
         </div>
     </div>
-    <button type="submit" class="btn btn-primary btn-add-todo"
+    <button type="submit"
+            class="btn btn-primary btn-add-todo"
             [disabled]="addTodoForm.invalid">
         Add todo
     </button>

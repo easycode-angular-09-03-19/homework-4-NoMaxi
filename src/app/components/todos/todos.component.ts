@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Todo } from '../../interfaces/todo';
+import { combineAll } from 'rxjs/operators';
 
 @Component({
     selector: 'app-todos',
@@ -55,5 +56,13 @@ export class TodosComponent implements OnInit {
         if (taskDeletionConfirmed) {
             this.todos = this.todos.filter(el => el.id !== itemId);
         }
+    }
+    
+    onTodoItemToggleComplete(item): void {
+        this.todos.forEach(el => {
+            if (el.id === item.id) {
+                el.completed = !item.completed;
+            }
+        });
     }
 }

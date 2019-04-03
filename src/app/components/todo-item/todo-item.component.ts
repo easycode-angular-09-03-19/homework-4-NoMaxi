@@ -10,6 +10,7 @@ import { Todo } from '../../interfaces/todo';
 export class TodoItemComponent implements OnInit {
     @Input() item: Todo;
     @Output() deleteItem: EventEmitter<number> = new EventEmitter<number>();
+    @Output() isItemCompleted: EventEmitter<Todo> = new EventEmitter<Todo>();
 
     constructor() {}
 
@@ -22,6 +23,6 @@ export class TodoItemComponent implements OnInit {
 
     /** Toggle the completion state of the current todo-item */
     toggleTaskComplete(): void {
-        this.item.completed = !this.item.completed;
+        this.isItemCompleted.emit(this.item);
     }
 }
